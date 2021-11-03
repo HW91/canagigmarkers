@@ -19,7 +19,7 @@ body {
   bottom: 0;
   left: 0;
   font: 12px/20px "Helvetica Neue", Arial, Helvetica, sans-serif;
-  background-color: #fff;
+  background-color: #ffffff;
   /* overflow: hidden;
   overflow-y: scroll !important; */
 }
@@ -53,12 +53,12 @@ body {
 
 .map-overlay .listing > * {
   display: block;
-  padding: 5px 10px;
+  padding: 10px 10px;
   margin: 0;
 }
 
 .map-overlay .listing a {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid #ddd;
   text-decoration: none;
 }
 
@@ -113,6 +113,9 @@ button.first-popup {
 
 button.sidebar-button,
 button.first-popup:hover {
+  margin-top: 10px;
+  color: #ffffff;
+  background-color: #007922;
   cursor: pointer;
 }
 
@@ -178,7 +181,7 @@ p.sidebar-paragraph {
 .sidebar.visible {
   display: block;
   position: relative;
-  border: 1px solid #007922;
+  border: 5px solid #007922;
   background-color: #ffffff;
   left: 0px;
   z-index: 2001;
@@ -201,11 +204,11 @@ span.close-button {
   float: right;
   right: 13px;
   border-radius: 21px;
-  background-color: #cbbca3;
+  background-color: #ffffff;
   width: 26px;
   height: 26px;
   font-size: 14px;
-  color: #007922;
+  color: #000000;
   cursor: pointer;
   margin-top: 10px;
   margin-right: 15px;
