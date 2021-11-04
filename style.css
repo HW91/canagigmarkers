@@ -18,8 +18,8 @@ body {
   top: 0;
   bottom: 0;
   left: 0;
-  font: 12px/20px "Helvetica Neue", Arial, Helvetica, sans-serif;
-  background-color: #ffffff;
+  font: 14px/20px "Helvetica Neue", Arial, Helvetica, sans-serif;
+  background-color: #fff;
   /* overflow: hidden;
   overflow-y: scroll !important; */
 }
@@ -48,7 +48,7 @@ body {
 }
 
 #feature-listing img {
-  width: 32%;
+  width: 40%;
 }
 
 .map-overlay .listing > * {
@@ -58,7 +58,7 @@ body {
 }
 
 .map-overlay .listing a {
-  border-bottom: 2px solid #ddd;
+  border-bottom: 5px solid rgba(0, 0, 0, 0.2);
   text-decoration: none;
 }
 
@@ -67,8 +67,8 @@ body {
 }
 
 #feature-listing p.name {
-  margin-bottom: 2px;
-  margin-top: 2px;
+  margin-bottom: 4px;
+  margin-top: 4px;
 }
 
 button.listings-button{
@@ -113,9 +113,6 @@ button.first-popup {
 
 button.sidebar-button,
 button.first-popup:hover {
-  margin-top: 10px;
-  color: #ffffff;
-  background-color: #007922;
   cursor: pointer;
 }
 
@@ -181,7 +178,7 @@ p.sidebar-paragraph {
 .sidebar.visible {
   display: block;
   position: relative;
-  border: 5px solid #007922;
+  border: 10px solid #007922;
   background-color: #ffffff;
   left: 0px;
   z-index: 2001;
@@ -204,11 +201,11 @@ span.close-button {
   float: right;
   right: 13px;
   border-radius: 21px;
-  background-color: #ffffff;
+  background-color: #cbbca3;
   width: 26px;
   height: 26px;
   font-size: 14px;
-  color: #000000;
+  color: #007922;
   cursor: pointer;
   margin-top: 10px;
   margin-right: 15px;
