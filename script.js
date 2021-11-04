@@ -8,8 +8,19 @@ const map = new mapboxgl.Map({
 });
 
 const nav = new mapboxgl.NavigationControl({ showCompass: false });
-map.addControl(nav, 'bottom-right');
-
+map.addControl(nav, 'top-right');
+// Add geolocate control to the map.
+map.addControl(
+  new mapboxgl.GeolocateControl({
+  positionOptions: {
+  enableHighAccuracy: true
+  },
+  // When active the map will receive updates to the device's location as it changes.
+  trackUserLocation: true,
+  // Draw an arrow next to the location dot to indicate which direction the device is heading.
+  showUserHeading: true
+  })
+  );
 // Create a popup, but don't add it to the map yet.
 var popup = new mapboxgl.Popup({
   // closeButton: false,
@@ -245,7 +256,7 @@ map.on("load", async () => {
     "source": "jobListing",
     "filter": ['has', 'point_count'],
     "paint": {
-      "circle-color": "#14a400",
+      "circle-color": "#007922",
       "circle-radius": 20
     },
     // "filter": ["get", "point_count", "cluster"]
@@ -265,7 +276,10 @@ map.on("load", async () => {
         "DIN Offc Pro Medium",
         "Arial Unicode MS Bold"
       ],
-      "text-size": 13,
+      "text-size": 18,
+    },
+    paint: {
+      "text-color": "#ffffff"
     }
   });
 
@@ -532,22 +546,16 @@ map.on("load", async () => {
           properties: {
             id: item[0],
             featuredJob: item[1],
-            remote: item[2],
             postingDate: item[3],
             name: item[4], // posting title (job title)
             company: item[5],
-            industry: item[6],
             jobType: item[7],
             salary: item[8],
-            street: item[9],
             city: item[10],
             state: item[11],
-            zipCode: item[12],
             country: item[13],
-            fullAddress: item[14],
             jobDescription: item[17],
             link: item[18],
-            email: item[19],
             logo: companyLogo,
             icon: markerIcon,
           },
