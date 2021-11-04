@@ -1,10 +1,4 @@
-mapboxgl.accessToken = 'pk.eyJ1IjoiY2FuYWdpZyIsImEiOiJja3V6dzdtNWYydGExMndvZG12NThqbmpkIn0._qXSCKmbH3kafrivy_7o9w';
-var map = new mapboxgl.Map({
-    container: 'map', // container id
-    style: 'mapbox://styles/mapbox/light-v9', //stylesheet location
-    center: [-96.1581974, 36.1519752], // starting position
-    zoom: 3 // starting zoom
-});
+
 
 map.addControl(new MapboxGeocoder({
     accessToken: mapboxgl.accessToken
