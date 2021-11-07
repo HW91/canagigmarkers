@@ -144,6 +144,7 @@ function renderListings(features) {
           "</p>" +
           "<button class='sidebar-button'>Apply now</button></div>"
         );
+
         $("button.sidebar-button").click(function () {
           window.open(
             feature.properties.link,
