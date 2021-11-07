@@ -144,6 +144,11 @@ function renderListings(features) {
           "</p>" +
           "<button class='sidebar-button'>Apply now</button></div>"
         );
+        
+        
+<!-- AnyTrack Tracking Code -->
+         <script>!function(e,t,n,s,a){(a=t.createElement(n)).async=!0,a.src="https://assets.anytrack.io/TulPoxIDdt6w.js",(t=t.getElementsByTagName(n)[0]).parentNode.insertBefore(a,t),e[s]=e[s]||function(){(e[s].q=e[s].q||[]).push(arguments)}}(window,document,"script","AnyTrack");</script>
+<!-- End AnyTrack Tracking Code -->
 
         $("button.sidebar-button").click(function () {
           window.open(
