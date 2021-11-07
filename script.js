@@ -356,6 +356,10 @@ map.on("load", async () => {
           feature.properties.link,
           "_blank" // <- This is what makes it open in a new window.
         );
+        
+        <!-- AnyTrack Tracking Code -->
+<script>!function(e,t,n,s,a){(a=t.createElement(n)).async=!0,a.src="https://assets.anytrack.io/5SZY6Xf9tSST.js",(t=t.getElementsByTagName(n)[0]).parentNode.insertBefore(a,t),e[s]=e[s]||function(){(e[s].q=e[s].q||[]).push(arguments)}}(window,document,"script","AnyTrack");</script>
+<!-- End AnyTrack Tracking Code -->
       });
 
       $(".close-button").on("click", function () {
