@@ -4,7 +4,7 @@ const map = new mapboxgl.Map({
   container: "map",
   style: "mapbox://styles/canagig/ckv4ib5425pot14o6shn1e64g",
   center: [-96.1581974, 36.1519752],
-  zoom: 3,
+  zoom: 4,
 });
 
 const nav = new mapboxgl.NavigationControl({ showCompass: false });
