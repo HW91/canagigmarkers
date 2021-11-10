@@ -78,7 +78,7 @@ function renderListings(features) {
       //         "</p><p class='first-popup'>Job Type: " +
       //         feature.properties.jobType +
       //         "</p>" +
-      //         "<button class='first-popup'>See job details</button>"
+      //         "<button class='first-popup'>See more</button>"
       //     )
       //     .addTo(map);
       // //   // Fly the map to the location.
@@ -99,7 +99,7 @@ function renderListings(features) {
             "</p><p class='first-popup'>Job Type: " +
             feature.properties.jobType +
             "</p>" +
-            "<button class='first-popup'>See job details</button>"
+            "<button class='first-popup'>See more</button>"
           )
           .addTo(map);
         map.flyTo({
@@ -313,7 +313,7 @@ map.on("load", async () => {
         "</p><p class='first-popup'>Job Type: " +
         feature.properties.jobType +
         "</p>" +
-        "<button class='first-popup'>See job details</button>"
+        "<button class='first-popup'>See more</button>"
       )
       .addTo(map);
 
