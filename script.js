@@ -64,6 +64,23 @@ function renderListings(features) {
         "</button>";
         
       
+      $("button.listings-button").click(function () {
+        console.log('apply button clicked listings');
+        mixpanel.track('Apply Button Clicked',{
+        'link':prop.link,
+        'Name':prop.name,
+        'Company':prop.company,
+        'jobCity':prop.city,
+         'jobState':prop.state
+        });
+       /* window.open(
+          feature.properties.link,
+          "_blank" // <- This is what makes it open in a new window.
+        ); */
+      });
+      
+      
+      
       // item.addEventListener("mouseover", function () {
       // //   // Highlight corresponding feature on the map
       //   popup
