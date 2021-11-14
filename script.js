@@ -55,7 +55,7 @@ function renderListings(features) {
         "<p class='name'>State: " +
         prop.state +
         "</p>" +
-        '<button class="listings-button">' +
+        '<button onclick="applyButtonClicked('+prop.link+','+prop.name+','+prop.company+','+prop.city+','+prop.state+');" class="listings-button">' +
         '<a target="_blank" href="' +
         prop.link +
         '">' +
@@ -64,7 +64,7 @@ function renderListings(features) {
         "</button>";
         
       
-      $("button.listings-button").click(function () {
+      /*$("button.listings-button").click(function () {
         console.log('apply button clicked listings');
         mixpanel.track('Apply Button Clicked',{
         'link':prop.link,
@@ -72,7 +72,7 @@ function renderListings(features) {
         'Company':prop.company,
         'jobCity':prop.city,
          'jobState':prop.state
-        });
+        }); */
        /* window.open(
           feature.properties.link,
           "_blank" // <- This is what makes it open in a new window.
