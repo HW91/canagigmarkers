@@ -55,7 +55,7 @@ function renderListings(features) {
         "<p class='name'>State: " +
         prop.state +
         "</p>" +
-        '<button onclick="ListingApplyClicked("'+prop.link+'","'+prop.name+'","'+prop.company+'","'+prop.city+'","'+prop.state+'");" class="listings-button">' +
+        '<button onclick="ListingApplyClicked("'+prop.name+'","'+prop.company+'","'+prop.city+'","'+prop.state+'");" class="listings-button">' +
         '<a target="_blank" href="' +
         prop.link +
         '">' +
@@ -471,11 +471,11 @@ map.on("load", async () => {
   });
 
   
-function ListingApplyClicked(link,name,company,city,state){
+function ListingApplyClicked(name,company,city,state){
 
  console.log('apply button clicked listings');
         mixpanel.track('Apply Button Clicked',{
-        'link':link,
+        //'link':link,
         'Name':name,
         'Company':company,
         'jobCity':city,
