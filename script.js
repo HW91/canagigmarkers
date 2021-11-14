@@ -64,7 +64,7 @@ function renderListings(features) {
         "</button>";
         
       
-      /*$("button.listings-button").click(function () {
+      $("button.listings-button").click(function () {
         console.log('apply button clicked listings');
         mixpanel.track('Apply Button Clicked',{
         'link':prop.link,
@@ -72,12 +72,15 @@ function renderListings(features) {
         'Company':prop.company,
         'jobCity':prop.city,
          'jobState':prop.state
-        }); */
+        }); 
+        
+        event.stopPropagation();
+        event.preventDefault();
        /* window.open(
           feature.properties.link,
           "_blank" // <- This is what makes it open in a new window.
-        ); 
-      }); */
+        ); */
+      }); 
       
       
       
