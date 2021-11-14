@@ -55,7 +55,7 @@ function renderListings(features) {
         "<p class='name'>State: " +
         prop.state +
         "</p>" +
-        '<button onclick="ListingApplyClicked('+prop.link+','+prop.name+','+prop.company+','+prop.city+','+prop.state+');" class="listings-button">' +
+        '<button onclick="ListingApplyClicked("'+prop.link+'","'+prop.name+'","'+prop.company+'","'+prop.city+'","'+prop.state+'");" class="listings-button">' +
         '<a target="_blank" href="' +
         prop.link +
         '">' +
