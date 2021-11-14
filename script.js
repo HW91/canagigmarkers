@@ -54,29 +54,7 @@ function renderListings(features) {
         "</p>" +
         "<p class='name'>State: " +
         prop.state +
-        "</p>" +
-        '<button class="listings-button">' +
-        '<a target="_blank" href="' +
-        prop.link +
-        '">' +
-        "Apply Now" +
-        "</a>" +
-        "</button>";
-        
-      
-      $("button.listings-button").unbind().click(function () {
-        console.log('apply button clicked listings');
-        mixpanel.track('Apply Button Clicked',{
-        'link':prop.link,
-        'Name':prop.name,
-        'Company':prop.company,
-        'jobCity':prop.city,
-         'jobState':prop.state
-        });
-      }); 
-      
-      
-      
+        "</p>";
       // item.addEventListener("mouseover", function () {
       // //   // Highlight corresponding feature on the map
       //   popup
@@ -161,15 +139,6 @@ function renderListings(features) {
         );
 
         $("button.sidebar-button").click(function () {
-          console.log('sidebar item apply clicked');
-          mixpanel.track('Apply Button Clicked',{
-        'link':feature.properties.link,
-        'Name':feature.properties.name,
-        'Company':feature.properties.company,
-        'jobCity':feature.properties.city,
-         'jobState':feature.properties.state
-        });
-          
           window.open(
             feature.properties.link,
             "_blank" // <- This is what makes it open in a new window.
@@ -343,15 +312,6 @@ map.on("load", async () => {
 
     // start custom second popup - sidebar
     $("button.first-popup").on("click", function () {
-      console.log('see more clicked');
-      mixpanel.track("See More Clicked",{
-      'link':feature.properties.link,
-        'Name':feature.properties.name,
-        'Company':feature.properties.company,
-        'jobCity':feature.properties.city,
-         'jobState':feature.properties.state
-      });
-      
       $("div.sidebar").addClass("visible");
       $("div.sidebar").html(
         '<div class="sidebar-content"><span class="close-button"> X</span><div class="sidebar-content-inner">' +
@@ -488,8 +448,6 @@ map.on("load", async () => {
     }
   });
 
-
- 
   // Call this function on initialization
   // passing an empty array to render an empty state
   renderListings([]);
@@ -577,4 +535,3 @@ map.on("load", async () => {
     }
   }
 });
-
