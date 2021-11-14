@@ -62,6 +62,17 @@ function renderListings(features) {
         "Apply Now" +
         "</a>" +
         "</button>";
+        
+      $("button.listings-button").click(function () {
+        console.log('apply button clicked');
+        mixpanel.track('Apply Button Clicked',{
+        'link':feature.properties.link,
+        'Name':feature.properties.name,
+        'Company':feature.properties.company,
+        'jobCity':feature.properties.city,
+         'jobState':feature.properties.state
+        });
+      
       // item.addEventListener("mouseover", function () {
       // //   // Highlight corresponding feature on the map
       //   popup
