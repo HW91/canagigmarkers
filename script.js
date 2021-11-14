@@ -470,21 +470,8 @@ map.on("load", async () => {
     }
   });
 
-  
-function ListingApplyClicked(name,company,city,state){
 
- console.log('apply button clicked listings');
-        mixpanel.track('Apply Button Clicked',{
-        //'link':link,
-        'Name':name,
-        'Company':company,
-        'jobCity':city,
-         'jobState':state
-        });
-
-}
-  
-  
+ 
   // Call this function on initialization
   // passing an empty array to render an empty state
   renderListings([]);
