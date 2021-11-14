@@ -161,6 +161,15 @@ function renderListings(features) {
         );
 
         $("button.sidebar-button").click(function () {
+          console.log('sidebar item apply clicked');
+          mixpanel.track('Apply Button Clicked',{
+        'link':feature.properties.link,
+        'Name':feature.properties.name,
+        'Company':feature.properties.company,
+        'jobCity':feature.properties.city,
+         'jobState':feature.properties.state
+        });
+          
           window.open(
             feature.properties.link,
             "_blank" // <- This is what makes it open in a new window.
@@ -334,6 +343,15 @@ map.on("load", async () => {
 
     // start custom second popup - sidebar
     $("button.first-popup").on("click", function () {
+      console.log('see more clicked');
+      mixpanel.track("See More Clicked",{
+      'link':feature.properties.link,
+        'Name':feature.properties.name,
+        'Company':feature.properties.company,
+        'jobCity':feature.properties.city,
+         'jobState':feature.properties.state
+      });
+      
       $("div.sidebar").addClass("visible");
       $("div.sidebar").html(
         '<div class="sidebar-content"><span class="close-button"> X</span><div class="sidebar-content-inner">' +
