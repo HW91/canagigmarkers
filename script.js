@@ -55,7 +55,7 @@ function renderListings(features) {
         "<p class='name'>State: " +
         prop.state +
         "</p>" +
-        '<button onclick="ListingApplyClicked("'+prop.name+'","'+prop.company+'","'+prop.city+'","'+prop.state+'");" class="listings-button">' +
+        '<button class="listings-button">' +
         '<a target="_blank" href="' +
         prop.link +
         '">' +
@@ -64,7 +64,7 @@ function renderListings(features) {
         "</button>";
         
       
-      /*$("button.listings-button").click(function () {
+      $("button.listings-button").unbind().click(function () {
         console.log('apply button clicked listings');
         mixpanel.track('Apply Button Clicked',{
         'link':prop.link,
@@ -73,7 +73,7 @@ function renderListings(features) {
         'jobCity':prop.city,
          'jobState':prop.state
         });
-      }); */
+      }); 
       
       
       
