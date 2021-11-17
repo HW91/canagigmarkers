@@ -303,7 +303,7 @@ div.sidebar-content-inner p.description {
 }
 
 #loading {
-    background: #ffffff url('gearscolor.gif'/200x200) no-repeat center center;
+    background: #ffffff url('gearscolor.gif') no-repeat center center;
     position: absolute;
     top: 0;
     left: 0;
