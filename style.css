@@ -154,7 +154,6 @@ p.sidebar-paragraph {
   margin-bottom: 3px;
 }
 
-
 .loader-wrapper {
     width: 100%;
     height: 100%;
@@ -162,6 +161,10 @@ p.sidebar-paragraph {
     top: 0;
     left: 0;
     background-color: #ffffff;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 #map
