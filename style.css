@@ -126,20 +126,17 @@ button.sidebar-button {
   padding: 0;
   margin: 0;
 }
-
 p.link {
   color: #052538;
   font: bold 11px "Work Sans Regular", "Source Sans Pro", Helvetica, Arial;
   padding: 0;
   margin: 5px 0 0 0;
 }
-
 p.link:hover {
   color: #ede8d6;
   text-decoration: underline;
   text-transform: uppercase;
 }
-
 h4.name {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -152,19 +149,6 @@ b.sidebar-bold,
 p.sidebar-paragraph {
   margin-top: 3px;
   margin-bottom: 3px;
-}
-
-.loader-wrapper {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #333;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    
 }
 
 #map
@@ -255,19 +239,15 @@ div.sidebar-content {
   line-height: 40px;
   margin-bottom: 5px;
 }
-
 .sidebar-content-inner h2 {
   font-size: 20px;
   margin-top: 5px;
   margin-bottom: 5px;
   font-weight: 600;
 }
-
 div.sidebar-content-inner h3 {
   font-size: 16px;
 }
-
-
 div.sidebar-content-inner p.description {
   font-size: 14px;
 } */
@@ -320,4 +300,12 @@ div.sidebar-content-inner p.description {
     margin-bottom: 2px;
     margin-top: 2px;
   }
+}
+
+#preloader{
+    background: #ffffff url(gearscolor.gif) no-repeat center center; 
+    height: 100vh;
+    width: 100%;  
+    position: fixed;
+    z-index: 100;
 }
