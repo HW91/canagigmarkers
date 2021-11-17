@@ -160,7 +160,7 @@ p.sidebar-paragraph {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #ffffff;
+    background-color: #333;
     display:flex;
     justify-content: center;
     align-items: center;
