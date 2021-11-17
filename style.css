@@ -304,12 +304,9 @@ div.sidebar-content-inner p.description {
 
 #loading {
     background: #ffffff url('gearscolor.gif') no-repeat center center;
-    position: fixed;
-    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
     height: 100vh;
-    z-index: 1;
-h1 {
-   position: absolute;
-   top: 47%;
-   left: 50%;
-}  
+    width: 100%;
+    z-index: 100;
