@@ -216,18 +216,18 @@ map.on("load", async () => {
   // Get the initial location of the International Space Station (jobListing).
   const geojson = await getLocation();
 
-  map.loadImage("redpin.png", (error, image) => {
+  map.loadImage("red-marker-icon.png", (error, image) => {
     if (error) throw error;
 
     // Add the image to the map style.
-    map.addImage("redpin", image);
+    map.addImage("red-marker-icon", image);
   });
 
-  map.loadImage("greenpin.png", (error, image) => {
+  map.loadImage("green-marker-icon.png", (error, image) => {
     if (error) throw error;
 
     // Add the image to the map style.
-    map.addImage("greenpin", image);
+    map.addImage("green-marker-icon", image);
   });
 
   // Add the jobListing location as a source.
