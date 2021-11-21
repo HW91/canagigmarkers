@@ -13,7 +13,7 @@ map.addControl(nav, 'top-right');
 map.addControl(
   new mapboxgl.GeolocateControl({
   positionOptions: {
-  enableHighAccuracy: true
+  enableHighAccuracy: false
   },
   // When active the map will receive updates to the device's location as it changes.
   trackUserLocation: true,
@@ -55,28 +55,28 @@ function renderListings(features) {
         "<p class='name'>State: " +
         prop.state +
         "</p>";
-      // item.addEventListener("mouseover", function () {
-      // //   // Highlight corresponding feature on the map
-      //   popup
-      //     .setLngLat(feature.geometry.coordinates)
-      //     .setHTML(
-      //       "<img class='first-popup' src='" +
-      //         feature.properties.logo +
-      //         "'></br>" +
-      //         "<b class='first-popup'>Title: " +
-      //         feature.properties.name +
-      //         "</b>" +
-      //         "<p class='first-popup'>Company: " +
-      //         feature.properties.company +
-      //         "</p><p class='first-popup'>Job Type: " +
-      //         feature.properties.jobType +
-      //         "</p>" +
-      //         "<button class='first-popup'>See more</button>"
-      //     )
-      //     .addTo(map);
-      // //   // Fly the map to the location.
+      item.addEventListener("mouseover", function () {
+      //   // Highlight corresponding feature on the map
+        popup
+          .setLngLat(feature.geometry.coordinates)
+          .setHTML(
+            "<img class='first-popup' src='" +
+            feature.properties.logo +
+            "'></br>" +
+            "<b class='first-popup'>Title: " +
+            feature.properties.name +
+            "</b>" +
+            "<p class='first-popup'>Company: " +
+            feature.properties.company +
+            "</p><p class='first-popup'>Job Type: " +
+            feature.properties.jobType +
+            "</p>" +
+            "<button class='first-popup'>See more</button>"
+          )
+          .addTo(map);
+      //   // Fly the map to the location.
 
-      // });
+      });
       item.addEventListener("click", function () {
         popup
           .setLngLat(feature.geometry.coordinates)
@@ -97,7 +97,7 @@ function renderListings(features) {
           .addTo(map);
         map.flyTo({
           center: feature.geometry.coordinates,
-          zoom: 10,
+          zoom: 9,
         });
       })
 
@@ -216,18 +216,18 @@ map.on("load", async () => {
   // Get the initial location of the International Space Station (jobListing).
   const geojson = await getLocation();
 
-  map.loadImage("red-marker-icon.png", (error, image) => {
+  map.loadImage("redpin.png", (error, image) => {
     if (error) throw error;
 
     // Add the image to the map style.
-    map.addImage("red-marker-icon", image);
+    map.addImage("redpin", image);
   });
 
-  map.loadImage("green-marker-icon.png", (error, image) => {
+  map.loadImage("greenpin.png", (error, image) => {
     if (error) throw error;
 
     // Add the image to the map style.
-    map.addImage("green-marker-icon", image);
+    map.addImage("greenpin", image);
   });
 
   // Add the jobListing location as a source.
@@ -269,7 +269,7 @@ map.on("load", async () => {
       renderListings(uniqueFeatures);
 
       // Clear the input container
-      filterEl.value = "";
+      // filterEl.value = "";
 
       // Store the current features in sn `places` variable to
       // later use for filtering on `keyup`.
@@ -428,6 +428,9 @@ map.on("load", async () => {
     var filtered = places.filter(function (feature) {
       var name = normalize(feature.properties.name);
       var code = normalize(feature.properties.link);
+      var company = normalize(feature.properties.company);
+      var city = normalize(feature.properties.city);
+      var state = normalize(feature.properties.state);
       return name.indexOf(value) > -1 || code.indexOf(value) > -1;
     });
 
@@ -496,9 +499,9 @@ map.on("load", async () => {
 
         var markerIcon = "";
         if (item[1] === "Yes") {
-          markerIcon = "red-marker";
+          markerIcon = "redpin";
         } else {
-          markerIcon = "green-marker";
+          markerIcon = "greenpin";
         }
 
         var jsonObject = {
@@ -513,7 +516,6 @@ map.on("load", async () => {
             salary: item[8],
             city: item[10],
             state: item[11],
-            country: item[13],
             jobDescription: item[17],
             link: item[18],
             logo: companyLogo,
