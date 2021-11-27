@@ -8,7 +8,7 @@ const map = new mapboxgl.Map({
 });
 
 const nav = new mapboxgl.NavigationControl({ showCompass: false });
-map.addControl(nav, 'bottom-right');
+map.addControl(nav, 'top-right');
 // Add geolocate control to the map.
 map.addControl(
   new mapboxgl.GeolocateControl({
