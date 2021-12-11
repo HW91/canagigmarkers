@@ -175,8 +175,8 @@ function renderListings(features) {
   } else {
     // I add this part of code for not needing a map dragging to populate the results on the sidebar:
     map.fitBounds([
-      [-78.766357, 42.793953],
-      [-88.0686147, 37.9002342],
+      [-66.94838, 47.46965],
+      [-128.71732, 23.84461],
     ]);
 
     // empty.textContent = 'Drag the map to populate results';
@@ -414,11 +414,11 @@ map.on("load", async () => {
   //     )
   //     .addTo(map);
   // });
-
-  // map.on("mouseleave", "jobListing", function () {
-  //   map.getCanvas().style.cursor = "";
-  //   popup.remove();
-  // });  
+  
+  map.on("mouseleave", "jobListing", function () {
+    map.getCanvas().style.cursor = "";
+    popup.remove();
+  });  
   
   filterEl.addEventListener("keyup", function (e) {
     var value = normalize(e.target.value);
@@ -426,11 +426,9 @@ map.on("load", async () => {
     // Filter visible features that don't match the input value.
     var filtered = places.filter(function (feature) {
       var name = normalize(feature.properties.name);
-      var code = normalize(feature.properties.link);
       var company = normalize(feature.properties.company);
       var city = normalize(feature.properties.city);
-      var state = normalize(feature.properties.state);
-      return name.indexOf(value) > -1 || code.indexOf(value) > -1;
+      return name.indexOf(value) > -1 || company.indexOf(value) > -1 || city.indexOf(value) > -1;
     });
 
     // Populate the sidebar with filtered results
@@ -489,7 +487,6 @@ map.on("load", async () => {
       function addDataToArray(item) {
         var longitude = item[15];
         var latitude = item[16];
-
         var companyLogo = item[20];
         if (item[20]) {
           companyLogo = companyLogo.replace("open?id=", "uc?id=");
