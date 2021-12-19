@@ -265,7 +265,7 @@ map.on("load", async () => {
     if (features) {
       var uniqueFeatures = getUniqueFeatures(features, "name");
       // Populate features for the listing overlay.
-      renderListings(uniqueFeatures);
+      renderListings(features);
 
       // Clear the input container
       // filterEl.value = "";
