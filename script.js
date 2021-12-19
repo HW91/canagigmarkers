@@ -186,7 +186,7 @@ function renderListings(features) {
     filterEl.parentNode.style.display = "none";
 
     // remove features filter
-    //map.setFilter("jobListing", ["has", "link"]);
+    map.setFilter("jobListing", ["has", "link"]);
   }
 }
 
@@ -211,14 +211,9 @@ function getUniqueFeatures(array, comparatorProperty) {
   return uniqueFeatures;
 }
 
-map.on("load", () => {
-    // Add the jobListing location as a source.
-  map.addSource("jobListing", {
-    'type': 'vector',
-    'url': 'mapbox://mapbox.04w69w5j'
-  });
+map.on("load", async () => {
   // Get the initial location of the International Space Station (jobListing).
-  //const geojson = await getLocation();
+  const geojson = await getLocation();
 
   map.loadImage("redpin.png", (error, image) => {
     if (error) throw error;
@@ -234,7 +229,11 @@ map.on("load", () => {
     map.addImage("greenpin", image);
   });
 
-
+  // Add the jobListing location as a source.
+  map.addSource("jobListing", {
+    type: "geojson",
+    data: geojson,
+  });
   // Add the rocket symbol layer to the map.
   map.addLayer({
     id: "jobListing",
