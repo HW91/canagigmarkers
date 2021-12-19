@@ -265,14 +265,14 @@ map.on("load", async () => {
     //if (features) {
       //var uniqueFeatures = getUniqueFeatures(features, "name");
       // Populate features for the listing overlay.
-      renderListings(uniqueFeatures);
+      renderListings("joblisting");
 
       // Clear the input container
       // filterEl.value = "";
 
       // Store the current features in sn `places` variable to
       // later use for filtering on `keyup`.
-      places = uniqueFeatures;
+      places = "joblisting";
     }
   });
 
