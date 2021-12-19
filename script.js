@@ -186,7 +186,7 @@ function renderListings(features) {
     filterEl.parentNode.style.display = "none";
 
     // remove features filter
-    map.setFilter("jobListing", ["has", "link"]);
+    //map.setFilter("jobListing", ["has", "link"]);
   }
 }
 
