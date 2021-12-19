@@ -3,7 +3,6 @@ mapboxgl.accessToken =
 const map = new mapboxgl.Map({
   container: "map",
   style: "mapbox://styles/canagig/ckv4ib5425pot14o6shn1e64g",
-  CSV: 'Job_List.csv',
   center: [-101.871088,36.717658],
   zoom: 3,
 });
@@ -464,7 +463,7 @@ map.on("load", async () => {
     // Make a GET request to the API and return the location of the jobListing.
     try {
       const response = await fetch(
-        "Job_List.csv",
+        "https://sheets.googleapis.com/v4/spreadsheets/1HgNgglwfir_4Yk_0Y0T6HTLnmbXS98xJj5ngkBeZFk0/values/Sheet1!A2:U1000?majorDimension=ROWS&key=AIzaSyAFSAoTB2EKtPat2aMuMIEXuM44EoDcXIo",
         { method: "GET" }
       );
 
