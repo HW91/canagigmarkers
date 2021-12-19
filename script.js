@@ -211,7 +211,7 @@ function getUniqueFeatures(array, comparatorProperty) {
   return uniqueFeatures;
 }
 
-map.on("load", () => {
+map.on("load", async () => {
   // Get the initial location of the International Space Station (jobListing).
   //const geojson = await getLocation();
 
