@@ -3,7 +3,7 @@ mapboxgl.accessToken =
 const map = new mapboxgl.Map({
   container: "map",
   style: "mapbox://styles/canagig/ckv4ib5425pot14o6shn1e64g",
-  CSV: 'Data.csv',
+  CSV: 'Job_List.csv',
   center: [-101.871088,36.717658],
   zoom: 3,
 });
@@ -464,7 +464,7 @@ map.on("load", async () => {
     // Make a GET request to the API and return the location of the jobListing.
     try {
       const response = await fetch(
-        "Data.csv",
+        "Job_List.csv",
         { method: "GET" }
       );
 
