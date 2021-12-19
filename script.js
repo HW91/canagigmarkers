@@ -211,9 +211,9 @@ function getUniqueFeatures(array, comparatorProperty) {
   return uniqueFeatures;
 }
 
-map.on("load", async () => {
+map.on("load", () => {
   // Get the initial location of the International Space Station (jobListing).
-  const geojson = await getLocation();
+  //const geojson = await getLocation();
 
   map.loadImage("redpin.png", (error, image) => {
     if (error) throw error;
