@@ -262,17 +262,17 @@ map.on("load", async () => {
   map.on("moveend", function () {
     var features = map.queryRenderedFeatures({ layers: ["jobListing"] });
 
-    //if (features) {
-      //var uniqueFeatures = getUniqueFeatures(features, "name");
+    if (features) {
+      var uniqueFeatures = getUniqueFeatures(features, "link");
       // Populate features for the listing overlay.
-      renderListings("joblisting");
+      renderListings(uniqueFeatures);
 
       // Clear the input container
       // filterEl.value = "";
 
       // Store the current features in sn `places` variable to
       // later use for filtering on `keyup`.
-      places = "joblisting";
+      places = uniqueFeatures;
     }
   });
 
