@@ -262,8 +262,8 @@ map.on("load", async () => {
   map.on("moveend", function () {
     var features = map.queryRenderedFeatures({ layers: ["jobListing"] });
 
- 
-    
+    //if (features) {
+      //var uniqueFeatures = getUniqueFeatures(features, "name");
       // Populate features for the listing overlay.
       renderListings(features);
 
@@ -272,7 +272,7 @@ map.on("load", async () => {
 
       // Store the current features in sn `places` variable to
       // later use for filtering on `keyup`.
-     // places = uniqueFeatures;
+      //places = uniqueFeatures;
     }
   });
 
