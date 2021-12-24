@@ -273,7 +273,7 @@ map.on("load", async () => {
       // Store the current features in sn `places` variable to
       // later use for filtering on `keyup`.
       //places = uniqueFeatures;
-    )
+    
   });
 
   // When a click event occurs on a feature in the places layer, open a popup at the
