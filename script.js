@@ -260,14 +260,20 @@ map.on("load", async () => {
   // end bounds
 
   map.on("moveend", function () {
-    var features = map.queryRenderedFeatures(e.point, { 
-      layers: ["jobListing"],
-    });
-    const clickedPoint = features[0].geometry.coordinates;
-    flyToLocation(clickedPoint);
-    sortByDistance(clickedPoint);
-    createPopup(features[0]);
-    
+    var features = map.queryRenderedFeatures({ layers: ["jobListing"] });
+
+    if (features) {
+      var uniqueFeatures = getUniqueFeatures(features, "name");
+      // Populate features for the listing overlay.
+      renderListings(uniqueFeatures);
+
+      // Clear the input container
+      // filterEl.value = "";
+
+      // Store the current features in sn `places` variable to
+      // later use for filtering on `keyup`.
+      places = uniqueFeatures;
+    }
   });
 
   // When a click event occurs on a feature in the places layer, open a popup at the
