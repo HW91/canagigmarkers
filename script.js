@@ -49,11 +49,8 @@ function renderListings(features) {
         "<p class='name'>Company: " +
         prop.company +
         "</p>" +
-        "<p class='name'>City: " +
-        prop.city +
-        "</p>" +
-        "<p class='name'>State: " +
-        prop.state +
+        "<p class='name'>Location: " +
+        prop.location +
         "</p>";
       item.addEventListener("mouseover", function () {
       //   // Highlight corresponding feature on the map
@@ -123,17 +120,11 @@ function renderListings(features) {
           "<p class='sidebar-paragraph'>Salary: " +
           feature.properties.salary +
           "</p>" +
-          "<p class='sidebar-paragraph'>City: " +
-          feature.properties.city +
-          "</p>" +
-          "<p class='sidebar-paragraph'>State: " +
-          feature.properties.state +
+          "<p class='sidebar-paragraph'>Location: " +
+          feature.properties.location +
           "</p>" +
           "<p class='sidebar-paragraph'>Date Posted: " +
           feature.properties.postingDate +
-          "</p>" +
-          "<p class='sidebar-paragraph'>Job Description: " +
-          feature.properties.jobDescription +
           "</p>" +
           "<button class='sidebar-button'>Apply now</button></div>"
         );
@@ -328,17 +319,11 @@ map.on("load", async () => {
         "<p class='sidebar-paragraph'>Salary: " +
         feature.properties.salary +
         "</p>" +
-        "<p class='sidebar-paragraph'>City: " +
-        feature.properties.city +
-        "</p>" +
-        "<p class='sidebar-paragraph'>State: " +
-        feature.properties.state +
+        "<p class='sidebar-paragraph'>Location: " +
+        feature.properties.location +
         "</p>" +
         "<p class='sidebar-paragraph'>Date Posted: " +
         feature.properties.postingDate +
-        "</p>" +
-        "<p class='sidebar-paragraph'>Job Description: " +
-        feature.properties.jobDescription +
         "</p>" +
         "<button class='sidebar-button'>Apply now</button></div>"
       );
@@ -427,8 +412,8 @@ map.on("load", async () => {
     var filtered = places.filter(function (feature) {
       var name = normalize(feature.properties.name);
       var company = normalize(feature.properties.company);
-      var city = normalize(feature.properties.city);
-      return name.indexOf(value) > -1 || company.indexOf(value) > -1 || city.indexOf(value) > -1;
+      var location = normalize(feature.properties.location);
+      return name.indexOf(value) > -1 || company.indexOf(value) > -1 || location.indexOf(value) > -1;
     });
 
     // Populate the sidebar with filtered results
@@ -510,9 +495,7 @@ map.on("load", async () => {
             company: item[5],
             jobType: item[7],
             salary: item[8],
-            city: item[10],
-            state: item[11],
-            jobDescription: item[17],
+            location: item[9],
             link: item[18],
             logo: companyLogo,
             icon: markerIcon,
