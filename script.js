@@ -74,8 +74,8 @@ function renderListings(features) {
             "<p class='first-popup'>Location: " +
             feature.properties.locaion +
             "</p>" +
-            "<p class='first-popup'>Date Posted: " +
-            feature.properties.datePosted +
+            "<p class='first-popup'>Posting Date: " +
+            feature.properties.postingDate +
             "</p>" +          
             "<button class='first-popup'>See more</button>"
           )
@@ -104,8 +104,8 @@ function renderListings(features) {
             "<p class='first-popup'>Location: " +
             feature.properties.location +
             "</p>" +
-            "<p class='first-popup'>Date Posted: " +
-            feature.properties.datePosted +
+            "<p class='first-popup'>Posting Date: " +
+            feature.properties.postingDate +
             "</p>" +
             "<button class='first-popup'>See more</button>"
           )
@@ -141,7 +141,7 @@ function renderListings(features) {
           "<p class='sidebar-paragraph'>Location: " +
           feature.properties.location +
           "</p>" +
-          "<p class='sidebar-paragraph'>Date Posted: " +
+          "<p class='sidebar-paragraph'>Posting Date: " +
           feature.properties.postingDate +
           "</p>" +
           "<button class='sidebar-button'>Apply now</button></div>"
@@ -320,8 +320,8 @@ map.on("load", async () => {
         "</p><p class='first-popup'>Location: " +
         feature.properties.location +
         "</p>" +
-        "</p><p class='first-popup'>Date Posted: " +
-        feature.properties.datePosted +
+        "</p><p class='first-popup'>Posting Date: " +
+        feature.properties.postingDate +
         "</p>" +
         "<button class='first-popup'>See more</button>"
       )
@@ -349,7 +349,7 @@ map.on("load", async () => {
         "<p class='sidebar-paragraph'>Location: " +
         feature.properties.location +
         "</p>" +
-        "<p class='sidebar-paragraph'>Date Posted: " +
+        "<p class='sidebar-paragraph'>Posting Date: " +
         feature.properties.postingDate +
         "</p>" +
         "<button class='sidebar-button'>Apply now</button></div>"
@@ -361,8 +361,7 @@ map.on("load", async () => {
         'link':feature.properties.link,
         'Name':feature.properties.name,
         'Company':feature.properties.company,
-        'jobCity':feature.properties.city,
-         'jobState':feature.properties.state
+        'Location':feature.properties.location
         });
         window.open(
           feature.properties.link,
