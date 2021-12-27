@@ -309,17 +309,18 @@ map.on("load", async () => {
         "<b class='first-popup'>Title: " +
         feature.properties.name +
         "</b>" +
-        "<p class='first-popup'>Company: " +
+        "<b class='first-popup'>Company: " +
         feature.properties.company +
-        "</p><p class='first-popup'>Job Type: " +
+        "</b>" +
+        "<b class='first-popup'>Job Type: " +
         feature.properties.jobType +
-        "</p>" +
-        "</p><p class='first-popup'>Salary: " +
+        "</b>" +
+        "<b class='first-popup'>Salary: " +
         feature.properties.salary +
-        "</p>" +
-        "</p><p class='first-popup'>Location: " +
+        "</b>" +
+        "<b class='first-popup'>Location: " +
         feature.properties.location +
-        "</p>" +
+        "</b>" +
         "</p><p class='first-popup'>Date Posted: " +
         feature.properties.datePosted +
         "</p>" +
