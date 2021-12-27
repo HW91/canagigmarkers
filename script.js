@@ -314,6 +314,15 @@ map.on("load", async () => {
         "</p><p class='first-popup'>Job Type: " +
         feature.properties.jobType +
         "</p>" +
+        "</p><p class='first-popup'>Salary: " +
+        feature.properties.salary +
+        "</p>" +
+        "</p><p class='first-popup'>Location: " +
+        feature.properties.location +
+        "</p>" +
+        "</p><p class='first-popup'>Date Posted: " +
+        feature.properties.datePosted +
+        "</p>" +
         "<button class='first-popup'>See more</button>"
       )
       .addTo(map);
