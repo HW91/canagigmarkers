@@ -77,7 +77,7 @@ function renderListings(features) {
             "<p class='first-popup'>Posting Date: " +
             feature.properties.postingDate +
             "</p>" +          
-            "<button class='sidebar-button'>Apply now</button></div>"
+            "<button class='first-popup'>See more</button>"
           )
           .addTo(map);
       //   // Fly the map to the location.
@@ -107,7 +107,7 @@ function renderListings(features) {
             "<p class='first-popup'>Posting Date: " +
             feature.properties.postingDate +
             "</p>" +
-            "<button class='sidebar-button'>Apply now</button></div>"
+            "<button class='first-popup'>See more</button>"
           )
           .addTo(map);
         map.flyTo({
@@ -320,7 +320,7 @@ map.on("load", async () => {
         "</p><p class='first-popup'>Posting Date: " +
         feature.properties.postingDate +
         "</p>" +
-        "<button class='sidebar-button'>Apply now</button></div>"
+        "<button class='first-popup'>See more</button>"
       )
       .addTo(map);
 
