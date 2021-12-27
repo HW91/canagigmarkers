@@ -120,7 +120,7 @@ function renderListings(features) {
       listingEl.appendChild(item);
 
       // start custom second popup - sidebar
-      //$("button.first-popup").on("click", function () {
+      $("button.first-popup").on("click", function () {
         $("div.sidebar").addClass("visible");
         $("div.sidebar").html(
           '<div class="sidebar-content"><span class="close-button"> X</span><div class="sidebar-content-inner">' +
@@ -325,7 +325,7 @@ map.on("load", async () => {
       .addTo(map);
 
     // start custom second popup - sidebar
-    //$("button.first-popup").on("click", function () {
+    $("button.first-popup").on("click", function () {
       $("div.sidebar").addClass("visible");
       $("div.sidebar").html(
         '<div class="sidebar-content"><span class="close-button"> X</span><div class="sidebar-content-inner">' +
