@@ -278,7 +278,7 @@ map.on("load", async () => {
       renderListings(uniqueFeatures);
 
       // Clear the input container
-      // filterEl.value = "";
+      filterEl.value = "";
 
       // Store the current features in sn `places` variable to
       // later use for filtering on `keyup`.
