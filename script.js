@@ -43,9 +43,9 @@ function renderListings(features) {
       item.innerHTML =
         '<img class="name" src="' +
         prop.logo +
-        '"><p class="name">Title: ' +
+        '"><b class="name">Title: ' +
         prop.name +
-        "</p>" +
+        "</b>" +
         "<p class='name'>Company: " +
         prop.company +
         "</p>" +
