@@ -86,8 +86,8 @@ button.listings-button a{
 .marker {
   border: none;
   cursor: pointer;
-  height: 28px;
-  width: 20px;
+  height: 20px;
+  width: 15px;
   background-size: 20px;
   background-color: rgba(0, 0, 0, 0);
 }
