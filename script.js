@@ -342,14 +342,11 @@ map.on("load", async () => {
         feature.properties.company +
         "</p><p class='sidebar-paragraph'>Job Type: " +
         feature.properties.jobType +
-        "</p>" +
-        "<p class='sidebar-paragraph'>Salary: " +
+        "</p><p class='sidebar-paragraph'>Salary: " +
         feature.properties.salary +
-        "</p>" +
-        "<p class='sidebar-paragraph'>Location: " +
+        "</p><p class='sidebar-paragraph'>Location: " +
         feature.properties.location +
-        "</p>" +
-        "<p class='sidebar-paragraph'>Posting Date: " +
+        "</p><p class='sidebar-paragraph'>Posting Date: " +
         feature.properties.postingDate +
         "</p>" +
         "<button class='sidebar-button'>Apply now</button></div>"
