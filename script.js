@@ -77,7 +77,7 @@ function renderListings(features) {
             "<p class='first-popup'>Posting Date: " +
             feature.properties.postingDate +
             "</p>" +          
-            "<button class='first-popup'>See more</button>"
+            "<button class='sidebar-button'>Apply now</button></div>"
           )
           .addTo(map);
       //   // Fly the map to the location.
@@ -107,7 +107,7 @@ function renderListings(features) {
             "<p class='first-popup'>Posting Date: " +
             feature.properties.postingDate +
             "</p>" +
-            "<button class='first-popup'>See more</button>"
+            "<button class='sidebar-button'>Apply now</button></div>"
           )
           .addTo(map);
         map.flyTo({
@@ -120,7 +120,7 @@ function renderListings(features) {
       listingEl.appendChild(item);
 
       // start custom second popup - sidebar
-      $("button.first-popup").on("click", function () {
+      //$("button.first-popup").on("click", function () {
         $("div.sidebar").addClass("visible");
         $("div.sidebar").html(
           '<div class="sidebar-content"><span class="close-button"> X</span><div class="sidebar-content-inner">' +
@@ -320,12 +320,12 @@ map.on("load", async () => {
         "</p><p class='first-popup'>Posting Date: " +
         feature.properties.postingDate +
         "</p>" +
-        "<button class='first-popup'>See more</button>"
+        "<button class='sidebar-button'>Apply now</button></div>"
       )
       .addTo(map);
 
     // start custom second popup - sidebar
-    $("button.first-popup").on("click", function () {
+    //$("button.first-popup").on("click", function () {
       $("div.sidebar").addClass("visible");
       $("div.sidebar").html(
         '<div class="sidebar-content"><span class="close-button"> X</span><div class="sidebar-content-inner">' +
