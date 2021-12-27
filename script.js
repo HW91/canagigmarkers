@@ -43,8 +43,7 @@ function renderListings(features) {
       item.innerHTML =
         '<img class="name" src="' +
         prop.logo +
-        '"></br>' +
-        "<b class="name">Title: ' +
+        '"><b class="name">Title: ' +
         prop.name +
         "</b>" +
         "<p class='name'>Company: " +
@@ -73,7 +72,7 @@ function renderListings(features) {
             feature.properties.salary +
             "</p>" +
             "<p class='first-popup'>Location: " +
-            feature.properties.location +
+            feature.properties.locaion +
             "</p>" +
             "<p class='first-popup'>Posting Date: " +
             feature.properties.postingDate +
