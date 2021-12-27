@@ -41,9 +41,10 @@ function renderListings(features) {
       // item.href = prop.wikipedia;
       // item.target = '_blank';
       item.innerHTML =
-        '<img class="name" src="' +
+        "<img class='name' src='" +
         prop.logo +
-        '"><b class="name">Title: ' +
+        "'></br>" +
+        "<b class='name'>Title: " +
         prop.name +
         "</b>" +
         "<p class='name'>Company: " +
