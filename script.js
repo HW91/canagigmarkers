@@ -98,6 +98,15 @@ function renderListings(features) {
             "</p><p class='first-popup'>Job Type: " +
             feature.properties.jobType +
             "</p>" +
+            "<p class='first-popup'>Salary: " +
+            feature.properties.salary +
+            "</p>" +
+            "<p class='first-popup'>Location: " +
+            feature.properties.location +
+            "</p>" +
+            "<p class='first-popup'>Date Posted: " +
+            feature.properties.datePosted +
+            "</p>" +
             "<button class='first-popup'>See more</button>"
           )
           .addTo(map);
