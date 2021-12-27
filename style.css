@@ -223,7 +223,8 @@ div.sidebar-content {
   /* overflow-y: scroll !important;
   overflow-x: hidden; */
   height: auto;
-  font: 15px, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font: "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 
 .sidebar-content-inner {
